@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>All Flats</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <% @flats.each do |flat| %>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> <%= flat.name %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="flex">
+            <div class="flex align-items-center">
+              <i class="fa-solid fa-people-line"></i>
+              <span><%= flat.number_of_guests %></span>
+            </div>
+            <div class="flex align-items-center ms-3">
+              <i class="fa-solid fa-euro-sign"></i>
+              <span><%= flat.price_per_night %></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
